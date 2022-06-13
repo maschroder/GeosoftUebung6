@@ -13,4 +13,3 @@ function handleRequest (request, response)
  console.log(response)
 }
 
-let a =1;
