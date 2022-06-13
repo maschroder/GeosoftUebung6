@@ -1,11 +1,14 @@
+// Expanded Version
 let http = require('http') // use an existing module from node
+let host = "localhost" // 127.0.0.1
+let port = 5000
 let server = http.createServer(handleRequest) // create a server
-server.listen(3000) // say where the server should listen
+server.listen(port, host) // say where the server should listen
 // say what the server should do, when it gets an incoming request
-function handleRequest (request, response)
+function handleRequest (req, res)
 {
- console.log(request)
- console.log(response)
+ res.writeHead(200, {'Content-Type': 'text/html'})
+ res.write ("Hellooooooo")
+ res.end()
 }
-
-// einfacher Kommentar
+console.log(`Server is running on ${host}:${port}`)
