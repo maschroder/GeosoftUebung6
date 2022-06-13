@@ -12,4 +12,3 @@ function handleRequest (request, response)
  console.log(request)
  console.log(response)
 }
-
