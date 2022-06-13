@@ -35,3 +35,7 @@ function handleRequest (request, res)
 
 
 console.log(`Server is running on ${host}:${port}`)
+
+
+// 3 HTML Seiten erstellen, in public Ordner und über Methode aus Beispielcode aufrufen
+// .gitignore erstellen und node_modules darin ignorieren
