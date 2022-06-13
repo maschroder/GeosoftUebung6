@@ -12,3 +12,6 @@ function handleRequest (req, res)
  res.end()
 }
 console.log(`Server is running on ${host}:${port}`)
+
+// Kommentar
+let a = 1;
