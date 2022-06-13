@@ -15,3 +15,5 @@ console.log(`Server is running on ${host}:${port}`)
 
 // Kommentar
 let a = 1;
+let b = 2;
+//
