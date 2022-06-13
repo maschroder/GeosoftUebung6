@@ -1,2 +1,2 @@
 # GeosoftUebung6
-Gruppe
+Gruppe: Maike Schröder, Arne Wilsberg, Derya Sen
