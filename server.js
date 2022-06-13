@@ -12,5 +12,3 @@ function handleRequest (request, response)
  console.log(request)
  console.log(response)
 }
-
-let a =1;
