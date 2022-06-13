@@ -1,1 +1,2 @@
 # GeosoftUebung6
+Gruppe
