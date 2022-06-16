@@ -39,3 +39,5 @@ console.log(`Server is running on ${host}:${port}`)
 
 // 3 HTML Seiten erstellen, in public Ordner und über Methode aus Beispielcode aufrufen
 // .gitignore erstellen und node_modules darin ignorieren
+// Code Beispiel express_server.js -> über routen auf die verschiedenen html seiten zugreifen
+// Minute 34: birds-router.js enthält routen. app.js starten und über diese routen, die aus bird aufrufen
