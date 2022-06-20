@@ -3,20 +3,10 @@
 // execution of functions when the DOM has loaded
 window.onload = function () {
 
-  console.log("geojson coming from the database", geojson)
-
-  // change the background color of the document
-  let color_selector = document.getElementById("color_selector")
-  color_selector.addEventListener("input", () => {
-
-    console.log(color_selector.value)
-    // update the color of the document's background
-    document.body.style.backgroundColor = color_selector.value
-
-  })
+  //console.log("geojson coming from the database", geojson)
 
 
-  /*
+  
   // geojson file about the pictures
    let geojson = { 
   "type": "FeatureCollection",
@@ -103,7 +93,6 @@ window.onload = function () {
     }
     ]
       }
-   */
 
   // create a variable for the map
   let mymap = L.map('myfirstmap',
@@ -114,13 +103,12 @@ window.onload = function () {
 
 
   // add the base map
-  L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${myMapBoxKey}`, {
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
     tileSize: 512,
-    zoomOffset: -1,
-    accessToken: myMapBoxKey
+    zoomOffset: -1
   }).addTo(mymap)
 
   // retrieve the pictures
@@ -132,30 +120,6 @@ window.onload = function () {
     return el.properties.poiname
   })
   //console.log(poinames)
-
-  // autocomplete
-  $("#pictures").autocomplete
-    ({
-      minLength: 1, // start after 1 character
-      source: poinames, // take the poinames as source
-      select: function (event, ui) {
-        this.value = ui.item.value // update the value of the current field with the value of the selected element
-
-        let details = pictures.filter(function (el) {
-          // return the only object for which the poiname matches the selection
-          return el.properties.poiname === ui.item.value
-        })
-
-
-        // show the details as a JSON text
-        showDetailsAsCard(details)
-
-        // show the details on a leaflet map 
-        showDetailsOnMap(details, mymap)
-
-        return false // see https://css-tricks.com/return-false-and-prevent-default/
-      }
-    })
 
 }
 
