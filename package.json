@@ -2,10 +2,10 @@
   "name": "uebung6",
   "version": "1.0.0",
   "description": "new package gson",
-  "main": "server.js",
+  "main": "express-server.js",
   "scripts": {
-    "test": "node server.js",
-    "start": "node server.js"
+    "test": "node express-server.js",
+    "start": "node express-server.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "\"json\"",
     "\"localhost\""
   ],
-  "author": "Derya Sen, Maike Schröder, Arne Wilsberg",
+  "author": "Derya Sen, Maike Schröder, Arne Wilberg",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/maschroder/GeosoftUebung6/issues"
