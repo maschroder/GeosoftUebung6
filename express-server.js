@@ -31,7 +31,7 @@ app.use('/seite3', seite3);
 
 
 
-// define a route
+// define first route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/', (req, res) => 
 {
@@ -39,6 +39,8 @@ app.get('/', (req, res) =>
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'index.html'))
 })
+
+
 
 
 // serve static files
