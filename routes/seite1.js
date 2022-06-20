@@ -10,7 +10,7 @@ const collectionName = 'newpois' // collection name
 /* Addition home page. */
 router.get('/', function(req, res, next) 
 {
-  res.render('add', { title: 'Addition Page' });
+  res.json({});
 });
 
 /*  */
