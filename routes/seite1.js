@@ -8,7 +8,7 @@ const dbName = 'mydatabase' // database name
 const collectionName = 'newpois' // collection name
 
 /* Addition home page. */
-router.get('/', function(req, res, next) 
+router.get('/post', function(req, res, next) 
 {
   res.json({});
 });
