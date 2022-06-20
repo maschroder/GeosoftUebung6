@@ -38,7 +38,11 @@ app.get('/post', (req, res) =>
   //res.send('Hello World!')
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'post.html'))
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> 13f0ee333d2ef4b73848d503d93b53c5461718e5
 })
 
 // define second route
