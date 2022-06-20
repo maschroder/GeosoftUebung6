@@ -13,6 +13,7 @@
    
    const collectionName = 'PlacesMuenster' // collection name
    
+   let db;
    
    async function main () 
    {
@@ -20,7 +21,7 @@
          await client.connect()
          console.log('Connected successfully to server')
    
-         const db = client.db(dbName)
+         db = client.db(dbName)
    
          const collection = db.collection(collectionName)
    
@@ -358,3 +359,13 @@
        */
    
    }
+
+  const findPois = async  () => {
+    const collection = db.collection("pois")
+    const cursor =  collection.find({})
+   
+    const results = await cursor.toArray();
+    return results;
+   }
+
+module.exports = { findPois }

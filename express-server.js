@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
 
+const database = require("./ourdatabase")
+
 const app = express()
 const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-ports-are-considered-unsafe-by-chrome 
 const host = "localhost" //127.0.0.1
@@ -34,6 +36,15 @@ app.get('/', (req, res) =>
   //res.send('Hello World!')
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'startseite.html'))
+ 
+})
+
+app.get('/api/pois', (req, res) => 
+{ 
+  // mongodb
+  database.findPois().then((data) => {
+    res.json([data])
+  })
  
 })
 

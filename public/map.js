@@ -5,7 +5,13 @@ window.onload = function () {
 
   //console.log("geojson coming from the database", geojson)
 
+   const loadPois = async () => {
+    const resp = await fetch("/api/pois");
+    const data = await resp.json();
+    console.log("API DATA", data);
+   }
 
+   loadPois();
   
   // geojson file about the pictures
    let geojson = { 
