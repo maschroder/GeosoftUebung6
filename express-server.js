@@ -3,6 +3,9 @@ const path = require('path')
 
 const app = express()
 const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-ports-are-considered-unsafe-by-chrome 
+const host = "localhost" //127.0.0.1
+
+server.listen(port, host)
 
 var seite1 = require('./routes/seite1');
 var seite2 = require('./routes/seite2');
