@@ -5,7 +5,7 @@
 
    const { MongoClient } = require('mongodb')
 
-   const url = 'mongodb://localhost:27017' // connection URL
+   const url = 'mongodb://127.0.0.1:27017' // connection URL
    
    const client = new MongoClient(url) // mongodb client
    
@@ -45,10 +45,10 @@
         insertDocuments(collection, data)
    
         // count the number of rows in the collection
-        countRows (collection)
+       // countRows (collection)
    
         // find documents 
-        findDocuments(collection)
+       // findDocuments(collection)
      
    }
    
