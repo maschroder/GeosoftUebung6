@@ -4,7 +4,9 @@ const path = require('path')
 const app = express()
 const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-ports-are-considered-unsafe-by-chrome 
 
-
+var seite1 = require('./routes/seite1');
+var seite2 = require('./routes/seite2');
+var seite3 = require('./routes/seite3');
 /* // Middleware
 var myLogger = function (req, res, next) 
 {
