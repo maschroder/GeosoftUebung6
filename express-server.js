@@ -38,8 +38,7 @@ app.get('/post', (req, res) =>
   //res.send('Hello World!')
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'post.html'))
-  res.sendFile(path.join(__dirname, '/public', 'get.html'))
-  res.sendFile(path.join(__dirname, '/public', 'delete.html'))
+ 
 })
 
 // define second route
@@ -51,7 +50,7 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public', 'get.html'))
 })
 
-// define second route
+// define third route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/delete', (req, res) => 
 {
