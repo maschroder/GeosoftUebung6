@@ -6,7 +6,7 @@ const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-
 const host = "localhost" //127.0.0.1
 
 app.listen(port, host)
-
+/** 
 var seite1 = require('./routes/seite1');
 var seite2 = require('./routes/seite2');
 var seite3 = require('./routes/seite3');
@@ -25,13 +25,31 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/seite1', seite1);
 app.use('/seite2', seite2);
 app.use('/seite3', seite3);
-
-
-
-
-
+*/
 
 // define first route
+// function taken from https://expressjs.com/de/starter/hello-world.html
+app.get('/', (req, res) => 
+{
+  //res.send('Hello World!')
+  res.set('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '/public', 'startseite.html'))
+ 
+})
+
+
+
+// define second route
+// function taken from https://expressjs.com/de/starter/hello-world.html
+app.get('/get', (req, res) => 
+{
+  //res.send('Hello World!')
+  res.set('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '/public', 'get.html'))
+})
+
+
+// define third route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/post', (req, res) => 
 {
@@ -41,16 +59,7 @@ app.get('/post', (req, res) =>
  
 })
 
-// define second route
-// function taken from https://expressjs.com/de/starter/hello-world.html
-app.get('/', (req, res) => 
-{
-  //res.send('Hello World!')
-  res.set('Content-Type', 'text/html');
-  res.sendFile(path.join(__dirname, '/public', 'get.html'))
-})
-
-// define third route
+// define fourth route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/delete', (req, res) => 
 {
