@@ -33,11 +33,29 @@ app.use('/seite3', seite3);
 
 // define first route
 // function taken from https://expressjs.com/de/starter/hello-world.html
-app.get('/', (req, res) => 
+app.get('/post', (req, res) => 
 {
   //res.send('Hello World!')
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'index.html'))
+})
+
+// define second route
+// function taken from https://expressjs.com/de/starter/hello-world.html
+app.get('/', (req, res) => 
+{
+  //res.send('Hello World!')
+  res.set('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '/public', 'get.html'))
+})
+
+// define second route
+// function taken from https://expressjs.com/de/starter/hello-world.html
+app.get('/delete', (req, res) => 
+{
+  //res.send('Hello World!')
+  res.set('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '/public', 'delete.html'))
 })
 
 
