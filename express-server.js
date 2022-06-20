@@ -35,9 +35,9 @@ app.use('/seite3', seite3);
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/', (req, res) => 
 {
-  res.send('Hello World!')
-  //res.set('Content-Type', 'text/html');
-  //res.sendFile(path.join(__dirname, '/public', 'example06.html'))
+  //res.send('Hello World!')
+  res.set('Content-Type', 'text/html');
+  res.sendFile(path.join(__dirname, '/public', 'index.html'))
 })
 
 
