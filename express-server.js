@@ -33,11 +33,7 @@ app.get('/', (req, res) =>
 {
   //res.send('Hello World!')
   res.set('Content-Type', 'text/html');
-<<<<<<< HEAD
-  res.sendFile(path.join(__dirname, '/public', 'post.html'))
-=======
   res.sendFile(path.join(__dirname, '/public', 'startseite.html'))
->>>>>>> aeedf6ce7dfd5e496dd04e2450eee693ba945031
  
 })
 
