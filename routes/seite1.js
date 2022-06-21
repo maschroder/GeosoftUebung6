@@ -4,8 +4,8 @@ const { MongoClient } = require('mongodb')
 
 const url = 'mongodb://localhost:27017' // connection URL
 const client = new MongoClient(url) // mongodb client
-const dbName = 'mydatabase' // database name
-const collectionName = 'newpois' // collection name
+const dbName = 'mydb' // database name
+const collectionName = 'PlacesMuenster' // collection name
 
 /* Addition home page. */
 router.get('/post', function(req, res, next) 
