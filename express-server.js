@@ -8,7 +8,7 @@ const port = 3000 // unsafe ports: https://superuser.com/questions/188058/which-
 const host = "localhost" //127.0.0.1
 
 app.listen(port, host)
-
+/** 
 //var startseite = require('./routes/startseite');
 var seite1 = require('./routes/seite1');
 var seite2 = require('./routes/seite2');
@@ -28,10 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/seite1', seite1);
 app.use('/seite2', seite2);
 app.use('/seite3', seite3);
+*/
 
 
-
-/** 
 // define first route
 // function taken from https://expressjs.com/de/starter/hello-world.html
 app.get('/', (req, res) => 
@@ -81,7 +80,7 @@ app.get('/delete', (req, res) =>
   res.set('Content-Type', 'text/html');
   res.sendFile(path.join(__dirname, '/public', 'delete.html'))
 })
-*/
+
 
 
 
