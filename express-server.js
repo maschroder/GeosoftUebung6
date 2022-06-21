@@ -9,6 +9,7 @@ const host = "localhost" //127.0.0.1
 
 app.listen(port, host)
 
+//var startseite = require('./routes/startseite');
 var seite1 = require('./routes/seite1');
 var seite2 = require('./routes/seite2');
 var seite3 = require('./routes/seite3');
@@ -23,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // adding my custom routes
-// app.use('/', seite1);
+//app.use('/', startseite);
 app.use('/seite1', seite1);
 app.use('/seite2', seite2);
 app.use('/seite3', seite3);
